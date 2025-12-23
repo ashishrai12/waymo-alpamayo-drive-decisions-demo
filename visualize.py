@@ -45,6 +45,10 @@ def create_visualization_window(frames, decisions, original_fps=30):
             if frame_idx >= len(frames):
                 frame_idx = 0  # Loop back to start
 
+        # Check if window was closed by user (clicking X)
+        if cv2.getWindowProperty(window_name, cv2.WND_PROP_VISIBLE) < 1:
+            break
+
         key = cv2.waitKey(delay if not paused else 0) & 0xFF
 
         if key == ord('q'):  # Quit
