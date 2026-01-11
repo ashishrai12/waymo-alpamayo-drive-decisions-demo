@@ -31,11 +31,20 @@ This demo demonstrates high-level autonomous driving decision making through:
 
 ## Usage
 
-### Prepare Data
+### Local Setup
 
-1. Download Waymo Open Dataset scenes
-2. Extract front camera video clips to MP4 format
-3. Place video files in the `data/` folder
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+3. Set up PYTHONPATH:
+   ```bash
+   # Windows
+   $env:PYTHONPATH = "src"
+   # Linux/macOS
+   export PYTHONPATH=$PYTHONPATH:$(pwd)/src
+   ```
 
 ### Run Demo
 
@@ -43,32 +52,38 @@ This demo demonstrates high-level autonomous driving decision making through:
 python main.py --video_path data/your_waymo_video.mp4 --fps 1
 ```
 
-Example with a sample video:
+### Docker Support
+
+Build and run using Docker:
+
 ```bash
-python main.py --video_path data/sample_urban_driving.mp4 --fps 2
+docker build -t alpamayo-demo .
+docker run -it alpamayo-demo
 ```
 
-Options:
-- `--video_path`: Path to Waymo video file (required)
-- `--fps`: Frames per second to sample (default: 1)
-- `--mock`: Use mock Alpamayo policy (default: True)
+## Project Structure
 
-### Controls
-
-- **Space**: Pause/Play
-- **N**: Next frame (when paused)
-- **P**: Previous frame (when paused)
-- **Q** or **ESC**: Quit
+```text
+├── src/
+│   └── alpamayo_demo/      # Core package
+│       ├── core/           # Logic and schemas
+│       ├── utils/          # Data loading and visualization
+│       └── pipeline.py     # Pipeline orchestration
+├── tests/                  # Unit and integration tests
+├── scripts/                # Utility scripts (CI, setup)
+├── data/                   # Dataset folder
+├── Dockerfile              # Containerization
+└── main.py                 # Entry point
+```
 
 ## Architecture
 
-### Files
+The project follows a modular design:
 
-- `main.py`: Entry point and pipeline orchestration
-- `data_loader.py`: Video loading and frame sampling
-- `alpamayo_policy.py`: Alpamayo R1 interface (mock implementation)
-- `decision_schema.py`: JSON schema validation
-- `visualize.py`: OpenCV-based UI and overlays
+- **`AlpamayoPolicy`**: The core decision-making interface.
+- **`DecisionSchema`**: Strict validation for model outputs.
+- **`DataLoader`**: Optimized frame sampling from high-frequency Waymo data.
+- **`Visualization`**: Real-time decision delivery HUD.
 
 ### Decision Format
 

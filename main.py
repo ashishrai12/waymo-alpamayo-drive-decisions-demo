@@ -16,9 +16,9 @@ Dependencies:
 import argparse
 import cv2
 import json
-from data_loader import load_video_frames
-from alpamayo_policy import AlpamayoPolicy
-from visualize import create_visualization_window
+from alpamayo_demo.utils.data_loader import load_video_frames
+from alpamayo_demo.core.policy import AlpamayoPolicy
+from alpamayo_demo.utils.visualization import create_visualization_window
 
 def main():
     parser = argparse.ArgumentParser(description="Alpamayo R1 Autonomous Driving Demo")
