@@ -24,6 +24,7 @@ wheels/
 # Virtual Environment
 venv/
 ENV/
+.venv/
 
 # Data
 data/*.mp4
@@ -42,3 +43,6 @@ htmlcov/
 # Docker
 .dockerignore
 # Dockerfile (usually keep in git)
+
+# macOS
+*.DS_Store

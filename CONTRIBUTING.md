@@ -14,8 +14,6 @@ Thank you for your interest in contributing! We follow standard professional eng
 3. **Branching**: Create a feature branch (`git checkout -b feature/your-feature`).
 4. **Code Quality**:
    - Run tests: `pytest tests/`
-   - Run linting: `flake8 src/ tests/`
-   - Use `black` and `isort` for formatting.
 5. **Commit**: Write descriptive commit messages.
 
 ## Testing
