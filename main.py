@@ -50,7 +50,8 @@ def main():
         decisions.append(decision)
 
     # Visualize
-    create_visualization_window(frames, decisions, original_fps=fps)
+    # Use the sampling FPS for visualization so it plays back at real-time speed relative to the sampling
+    create_visualization_window(frames, decisions, original_fps=args.fps)
 
 if __name__ == "__main__":
     main()
