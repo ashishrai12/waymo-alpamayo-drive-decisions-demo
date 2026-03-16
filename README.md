@@ -4,6 +4,13 @@ A minimal demo showcasing Alpamayo R1's video-language-action reasoning capabili
 
 <img width="1533" height="839" alt="{30C2EBF6-DAC6-4C21-990D-CF81B2077BEB}" src="https://github.com/user-attachments/assets/acc53850-d442-4441-bc0a-10f788d4c918" />
 
+### Simulated Trajectory & Decision Map
+
+<p align="center">
+  <img src="assets/trajectory_decisions.png" alt="Alpamayo R1 Trajectory Decision Map" width="800" />
+</p>
+
+> **↑ Generated with** `python scripts/generate_trajectory_visual.py` — uses the kinematic bicycle model to simulate an urban route with real-time driving decisions.
 
 ## Overview
 
