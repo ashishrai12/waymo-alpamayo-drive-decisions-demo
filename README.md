@@ -1,5 +1,11 @@
 # Alpamayo R1 Autonomous Driving Demo
 
+[![CI](https://github.com/ashishrai12/Waymo-Alpamayo-Drive-Decisions/actions/workflows/ci.yml/badge.svg)](https://github.com/ashishrai12/Waymo-Alpamayo-Drive-Decisions/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Python 3.7+](https://img.shields.io/badge/Python-3.7%2B-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-ff4b4b.svg?logo=streamlit)](https://streamlit.io)
+[![Julia](https://img.shields.io/badge/Julia-Math%20Foundations-9558B2.svg?logo=julia)](src/math_foundations.jl)
+
 A minimal demo showcasing Alpamayo R1's video-language-action reasoning capabilities using Waymo Open Dataset camera data.
 
 <img width="1533" height="839" alt="{30C2EBF6-DAC6-4C21-990D-CF81B2077BEB}" src="https://github.com/user-attachments/assets/acc53850-d442-4441-bc0a-10f788d4c918" />
@@ -207,8 +213,8 @@ We have provided a base Streamlit UI in `app.py`. Feel free to extend it further
 
 ## License
 
-[Add appropriate license]
+This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
 
 ## Contributing
 
-[Add contribution guidelines]
+Contributions are welcome! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
